@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our School | A Modern Learning Environment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #111111;
+            --secondary: #666666;
+            --accent: #007AFF; /* Modern blue */
+            --bg: #ffffff;
+            --light-gray: #f5f5f7;
+        }
+
+        * { box-sizing: border-box; transition: all 0.3s ease; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            color: var(--primary);
+            background-color: var(--bg);
+            opacity: 0; /* For fade-in effect */
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn { to { opacity: 1; } }
+
+        header {
+            padding: 1.5rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .logo { font-weight: 700; font-size: 1.4rem; letter-spacing: -0.5px; cursor: pointer; }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: var(--secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        nav a:hover { color: var(--primary); }
+
+        .hero {
+            padding: 120px 10% 80px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1.5px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--secondary);
+            margin-bottom: 2.5rem;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 60px 10%;
+            background: var(--light-gray);
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #eee;
+        }
+
+        .card h3 { margin-top: 0; font-size: 1.2rem; }
+        .card p { color: var(--secondary); font-size: 0.95rem; line-height: 1.7; }
+
+        footer {
+            padding: 60px 10%;
+            text-align: center;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            nav a { margin: 0 10px; }
+            .hero { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">SCHOOL_NAME</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#programs">Programs</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Shape the future of education.</h1>
+        <p>A minimalist space designed for focused learning, community growth, and academic excellence.</p>
+        <a href="mailto:admin@yourschool.com" class="btn">Get in Touch</a>
+    </section>
+
+    <div class="grid" id="programs">
+        <div class="card">
+            <h3>Our Mission</h3>
+            <p>We foster a culture of curiosity and discipline, preparing students for a rapidly changing world.</p>
+        </div>
+        <div class="card">
+            <h3>Modern Curriculum</h3>
+            <p>Blending traditional fundamentals with 21st-century technology and problem-solving skills.</p>
+        </div>
+        <div class="card">
+            <h3>Community First</h3>
+            <p>A small student-to-teacher ratio ensuring every child receives the attention they deserve.</p>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2026 SCHOOL_NAME. Built for the future.</p>
+    </footer>
+
+</body>
+</html>
